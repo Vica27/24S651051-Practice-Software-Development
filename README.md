@@ -5,7 +5,7 @@
 "I can do all things through Christ which strengtheneth me." 💪
 
 ### A food I don't like 👎:
-I would eat almost any food, but definitely not Octopus 🤮...
+I would eat almost any food, but definitely not Octopus... 🤮
 
 ### Travel recommendation ✈:
 ##### Landmark Beach. 
@@ -13,4 +13,4 @@ Somewhere in Lagos Nigeria, where I can recommend visiting would be Landmark Bea
 
 ### A useful German word 📝:
 ##### Entschuldigung
-It definitely have to be one of the most used words in German. From taking an excuse to asking questions or apologizing, it's a most-know word in German for me.
+It's definitely have to be one of the most used words in German. From taking an excuse to asking questions or apologizing, it's a most-know word in German for me.
