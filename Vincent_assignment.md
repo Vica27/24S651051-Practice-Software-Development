@@ -18,6 +18,14 @@ The recreation of the environments worked without any problems, no error was enc
 >
 ![image](https://github.com/Vica27/24S651051-Practice-Software-Development/assets/163086632/19caeb17-4202-4fb0-81f6-91f5f41453fd)
 >
+>
+### *Deactivating Both Environments*
+* conda deactivate
+>
+![image](https://github.com/Vica27/24S651051-Practice-Software-Development/assets/163086632/6a0ed1bb-6e23-4b61-bb64-db8fc2ae217c)
+>
+>
+>
 ---
 >
 ## A1: GitHub
