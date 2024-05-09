@@ -1,1 +1,4 @@
-
+## A3: Geo-Python Notebook
+In our final python project, our team would like to use the Meteostat, GeoPandas, and Folium libraries to analyze and visualize weather data. This project will fetch weather data for different locations (Germany and Austria), compare them, and visualize the results on a map and a time series plot.
+## Workflow on Anaconda Prompt
+* Changed directory: cd C:\Users\HP\PLUS_Software_Dev_ClimateDataProject
