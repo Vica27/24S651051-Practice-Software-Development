@@ -1,4 +1,58 @@
-## A3: Geo-Python Notebook
-In our final python project, our team would like to use the Meteostat, GeoPandas, and Folium libraries to analyze and visualize weather data. This project will fetch weather data for different locations (Germany and Austria), compare them, and visualize the results on a map and a time series plot.
-## Workflow on Anaconda Prompt
-* Changed directory: cd C:\Users\HP\PLUS_Software_Dev_ClimateDataProject
+A3: GEO-PYTHON NOTEBOOK
+•	In the final python project, my team would like to use Meteostat, GeoPandas, and Folium libraries to analyze and visualize weather data. 
+This project will fetch weather data for different locations (Germany and Austria), compare them, and visualize the results on a map and a time series plot.
+
+Workflow on Anaconda Prompt
+•	Changed directory: cd C:\Users\HP\PLUS_Software_Dev_ClimateDataProject
+•	Create conda environment: conda create -n A3_ClimateDataProject python=3.7
+•	Activate environment: conda activate A3_ClimateDataProject
+•	Installing the packages: conda install -c conda-forge notebook 
+•	To ensure that the specific packages installed by pip are tracked:  conda install pip
+•	To install the necessary libraries using pip: pip install meteostat geopandas folium matplotlib pandas 
+•	Installing ipykernel to manage the environment:  conda install ipykernel
+•	Installing jupyterlab: pip install jupyterlab
+•	To switch to Jupiter lab: jupyter lab
+
+Workflow on Jupyter lab
+•	Once the Lab is opened, go to A3 and create a new ipython notebook file:
+
+# To fetch weather data, perform some analysis, and visualize the results, below Python script was created:
+import pandas as pd 
+from meteostat import Stations, Daily 
+from datetime import datetime 
+import folium 
+import geopandas as gpd 
+import matplotlib.pyplot as plt
+
+# To define the time period: 
+start = datetime(2020, 1, 1) 
+end = datetime(2020, 12, 31) 
+
+# To fetch weather data for the two locations: 
+stations = Stations() 
+station1 = stations.nearby(51.1657, 10.4515).fetch(1)  # Germany 
+station2 = stations.nearby(48.2082, 16.3738).fetch(1)  # Austria 
+
+data1 = Daily(station1.index[0], start, end).fetch() 
+data2 = Daily(station2.index[0], start, end).fetch() 
+
+# To compare average temperatures: 
+avg_temp1 = data1['tavg'].mean() 
+avg_temp2 = data2['tavg'].mean() 
+print(f'Average temperature in Germany: {avg_temp1}°C') 
+print(f'Average temperature in Austria: {avg_temp2}°C') 
+
+# To plot temperature over time for both locations: 
+data1['tavg'].plot(label='Germany') 
+data2['tavg'].plot(label='Austria') 
+plt.legend() 
+plt.show() 
+
+# Visualize locations on a map: 
+m = folium.Map(location=[50, 10], zoom_start=5) 
+folium.Marker([51.1657, 10.4515], popup='Germany').add_to(m) 
+folium.Marker([48.2082, 16.3738], popup='Austria').add_to(m) 
+m.save('map.html') 
+
+•	This script fetches daily weather data for Germany and Austria for the year 2020, compares the average temperatures, plots the temperature over time for both locations, and visualizes the locations on a map. 
+ 
